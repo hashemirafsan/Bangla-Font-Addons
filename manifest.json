@@ -1,0 +1,50 @@
+{
+  "manifest_version": 2,
+  "name": "Bangla Font",
+  "version": "1.0.1",
+
+  "description": "A basic bangla font",
+  "icons": {
+    "32":"icons/moz.png",
+    "48": "icons/moz.png",
+    "96": "icons/moz.png"
+  },
+  "author": "Hashemi Rafsan",
+  "applications": {
+  "gecko": {
+    "id": "rafsan@gmail.com",
+    "strict_min_version": "42.0",
+    "strict_max_version": "53.*"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery-2.1.1.js","content_scr.js"],
+      "css":["contents.css"]
+    }
+  ],
+  "page_action": {
+  "browser_style": true,
+  "default_icon": {
+    "19": "icons/moz.png",
+    "38": "icons/moz.png"
+  }
+  },
+  "web_accessible_resource" : [
+    "css/main.css",
+    "css/jquery.ime.css",
+    "js/jquery-2.1.1.js",
+    "js/jquery.ime.js",
+    "js/jquery.ime.selector.js",
+    "js/jquery.ime.preferences.js",
+    "js/jquery.ime.inputmethods.js",
+    "js/functions.js",
+    "rules/bn/bn-avro3f32.js"
+  ],
+  "permissions": [
+    "webRequest",
+    "*://*/*",
+    "tabs"
+  ]
+}
